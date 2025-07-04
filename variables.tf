@@ -40,12 +40,15 @@ variable "planstartdate" {
   type        = string
 }
 
+variable "hoursperday" {
+  type        = string
+}
+
 variable "key_name" {
   description = "Base key name to generate unique keys."
   type        = string
 }
 
 variable "splunk_license_url" {
-  description = "Base key name to generate unique keys."
   type        = string
 }
