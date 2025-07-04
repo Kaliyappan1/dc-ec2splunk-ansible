@@ -150,13 +150,13 @@ resource "local_file" "ansible_inventory" {
     "${aws_instance.splunk_cluster[0].tags.Name} ansible_host=${aws_instance.splunk_cluster[0].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[0].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
 
     "[indexers]",
-    "${aws_instance.splunk_cluster[1].tags.Name} ansible_host=${aws_instance.splunk_cluster[1].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[1].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
-    "${aws_instance.splunk_cluster[2].tags.Name} ansible_host=${aws_instance.splunk_cluster[2].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[2].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
+    "${aws_instance.splunk_cluster[1].tags.Name} ansible_host=${aws_instance.splunk_cluster[1].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[1].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}",
+    "${aws_instance.splunk_cluster[2].tags.Name} ansible_host=${aws_instance.splunk_cluster[2].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[2].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}",
     "${aws_instance.splunk_cluster[3].tags.Name} ansible_host=${aws_instance.splunk_cluster[3].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[3].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
 
     "[search_heads]",
-    "${aws_instance.splunk_cluster[4].tags.Name} ansible_host=${aws_instance.splunk_cluster[4].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[4].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
-    "${aws_instance.splunk_cluster[5].tags.Name} ansible_host=${aws_instance.splunk_cluster[5].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[5].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
+    "${aws_instance.splunk_cluster[4].tags.Name} ansible_host=${aws_instance.splunk_cluster[4].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[4].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}",
+    "${aws_instance.splunk_cluster[5].tags.Name} ansible_host=${aws_instance.splunk_cluster[5].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[5].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}",
     "${aws_instance.splunk_cluster[6].tags.Name} ansible_host=${aws_instance.splunk_cluster[6].public_ip} ansible_user=ec2-user private_ip=${aws_instance.splunk_cluster[6].private_ip} ansible_ssh_private_key_file=${abspath("${path.module}/${local.final_key_name}.pem")}\n",
 
     "[Management_server]",
